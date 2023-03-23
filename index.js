@@ -7,7 +7,7 @@ console.log("Welcome to the WincWinc dating app")
 const userProfile = {
   first_name: "",
   last_name: "",
-  age: ``,
+  age: "",
   gender: "",
   gender_interest: "",
   location: "",
@@ -43,7 +43,7 @@ while (true) {
     console.log("Please fill in your age");
   } else {
     console.log(`Your age is ${answer}`);
-    userProfile.age = answer;
+    userProfile.age = Number(answer);
     break;
   }
 }
@@ -111,8 +111,9 @@ while(true) {
     console.log("The minimal age is 18, please choose again");
   } else {
     console.log(`You are interested in a candidate with the minimal age of ${answer}`);
-    userProfile.min_age_interest = answer;
-    break;
+    userProfile.min_age_interest = Number(answer);
+    break;jeroen
+    
   }
 }
 
@@ -122,7 +123,7 @@ while(true) {
     console.log("The maximal age is 18, please choose again");
   } else {
     console.log(`You are interested in a candidate with the maximal age of ${answer}`);
-    userProfile.max_age_interest = answer;
+    userProfile.max_age_interest = Number(answer);
     break;
   }
 }
