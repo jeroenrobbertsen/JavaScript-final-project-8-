@@ -9,9 +9,9 @@ De opdracht:
 
 - [x] Welcome the user with a message in the console.
 - [x] Create an empty profile object.
-- [ ] Create and prompt multiple questions that allow you to collect all the data needed to fill the profile object. The properties of the profile object are the same as the data given in mockData.js. The question you prompt should be clear and related to the property. E.g. a question for first_name could be: “What is your first name?”.
-- [ ] For each question you check wether the input is valid and if so, store the data in the profile object. If the input is not valid, ask the question again until it is valid.
-- [ ] Make sure that the first and last name are not empty strings.
+- [x] Create and prompt multiple questions that allow you to collect all the data needed to fill the profile object. The properties of the profile object are the same as the data given in mockData.js. The question you prompt should be clear and related to the property. E.g. a question for first_name could be: “What is your first name?”.
+- [x] For each question you check wether the input is valid and if so, store the data in the profile object. If the input is not valid, ask the question again until it is valid.
+- [x] Make sure that the first and last name are not empty strings.
 - [ ] Make sure that all number values are stored as number and not as string
 - [ ] Make sure the minimum interested age and maximum interested age is 18 or higher.
 - [ ] Make sure the maximum interested age is higher than the minimum interested age.
