@@ -14,11 +14,11 @@ De opdracht:
 - [x] Make sure that the first and last name are not empty strings.
 - [x] Make sure that all number values are stored as number and not as string
 - [x] Make sure the minimum interested age and maximum interested age is 18 or higher.
-- [ ] Make sure the maximum interested age is higher than the minimum interested age.
-- [ ] Make sure that gender can only be M, F, X. (X is all not male & female genders)
-- [ ] Make sure that the gender_interest can only be M, F, X, B (B stands for Bi)
-- [ ] Make sure that location can only be “rural” or “city”.
-- [ ] Make sure that max_age_interest is a higher number than min_age_interest
+- [x] Make sure the maximum interested age is higher than the minimum interested age.
+- [x] Make sure that gender can only be M, F, X. (X is all not male & female genders)
+- [x] Make sure that the gender_interest can only be M, F, X, B (B stands for Bi)
+- [x] Make sure that location can only be “rural” or “city”.
+- [x] Make sure that max_age_interest is a higher number than min_age_interest
 - [ ] Create a loop that iterates on the mockData array
 - [ ] Count the number of matches.
 - [ ] In this loop, compare the data with your profile data and store a person as a match when they meet the following criteria:
