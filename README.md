@@ -13,7 +13,7 @@ De opdracht:
 - [x] For each question you check wether the input is valid and if so, store the data in the profile object. If the input is not valid, ask the question again until it is valid.
 - [x] Make sure that the first and last name are not empty strings.
 - [x] Make sure that all number values are stored as number and not as string
-- [ ] Make sure the minimum interested age and maximum interested age is 18 or higher.
+- [x] Make sure the minimum interested age and maximum interested age is 18 or higher.
 - [ ] Make sure the maximum interested age is higher than the minimum interested age.
 - [ ] Make sure that gender can only be M, F, X. (X is all not male & female genders)
 - [ ] Make sure that the gender_interest can only be M, F, X, B (B stands for Bi)
