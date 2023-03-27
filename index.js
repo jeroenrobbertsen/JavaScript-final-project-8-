@@ -7,12 +7,12 @@ const mockData = require('./mockData.js').data;
 const userProfile = {
   first_name: "",
   last_name: "",
-  age: "",
+  age: 0,
   gender: "",
   gender_interest: "",
   location: "",
-  min_age_interest: "",
-  max_age_interest: "",
+  min_age_interest: 0,
+  max_age_interest: 0,
 }
 
 while (true) {
@@ -130,6 +130,56 @@ while(true) {
 }
 
 console.log(userProfile);
+
+
+// Filter alle gebruikers die voldoen aan de leeftijdsvereisten van de huidige gebruiker
+const ageMatches = mockData.filter(user => 
+  user.min_age_interest <= userProfile.age && 
+  user.max_age_interest >= userProfile.age &&
+  userProfile.min_age_interest <= user.age &&
+  userProfile.max_age_interest >= user.age);
+
+// Log de gevonden matches in de console
+console.log(ageMatches);
+
+
+// Filter alle gebruikers waarvoor de leeftijd van de huidige gebruiker valt binnen hun min_age_interest en max_age_interest
+const ageRangeMatches = mockData.filter(user =>
+  userProfile.age >= user.min_age_interest && userProfile.age <= user.max_age_interest);
+
+// Maak een array met alleen de voornamen van de matches
+const matchNames = ageRangeMatches.map(match => match.first_name);
+
+// Maak er een zin van
+const matchMessage = `Jouw leeftijd valt binnen de leeftijdscategorie van ${matchNames.join(', ')}!`;
+
+// Log de zin in de console
+console.log(matchMessage);
+
+const matchCount = ageRangeMatches.length;
+
+// Log het aantal matches in de console
+console.log(`Je hebt ${matchCount} matches!`);
+
+const genderMatches = ageRangeMatches.filter(user => user.gender === userProfile.gender_interest);
+console.log(`Je hebt ${genderMatches.length} matches van het gewenste geslacht!`);
+genderMatches.forEach(match => {
+  console.log(`Je hebt een match met ${match.first_name}!`);
+});
+
+const sameGenderMatches = genderMatches.filter(match => match.gender_interest === userProfile.gender);
+console.log(`Aantal matches met dezelfde gender interesse is: ${sameGenderMatches.length}`);
+console.log(`Voornamen van matches met dezelfde gender interesse: ${sameGenderMatches.map(match => match.first_name).join(", ")}`);
+
+const sameLocationMatches = sameGenderMatches.filter(match => match.location === userProfile.location);
+console.log(`Aantal matches met dezelfde locatie is: ${sameLocationMatches.length}`);
+console.log(`Voornamen van de matches met dezelfde locatie: ${sameLocationMatches.map(match => match.first_name).join(", ")}`);
+
+
+
+
+
+
 
 
 
